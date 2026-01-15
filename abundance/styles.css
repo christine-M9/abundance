@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+ 
+}
+
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(232, 180, 155, 0.85);  /* soft peach glass */
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 10;
+}
+
+.journey-section {
+  margin-top: 100vh;
+  position: relative;
+  z-index: 2;
+}
+.improve-section {
+  position: relative;
+  z-index: 2;
+}
+
+
+.logo h1 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: #2f2f2f;
+}
+
+.logo p {
+  font-family: "Shippori Mincho", serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #2f2f2f;
+  margin-top: 4px;
+}
+
+.top-bar nav a {
+  text-decoration: none;
+  color: #666;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .logo h1 {
+    font-size: 16px;
+  }
+
+  .logo p {
+    font-size: 13px;
+  }
+}
+
+/* Hero */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/Bbheroimg2.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Soft elegant overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);  /* LIGHT overlay */
+  z-index: 1;
+}
+
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  padding-left: 80px;
+  max-width: 500px;
+  color: white;
+}
+
+
+
+.hero-overlay h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 44px;
+  font-weight: 600; /* NOT bold */
+  letter-spacing: 1px;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+
+.subtitle {
+  font-family: "Shippori Mincho", serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+/* =========================
+   Mobile adjustments
+========================= */
+@media (max-width: 767px) {
+  .hero {
+    position: relative;     /* scrolls normally */
+    height: 70vh;           /* smaller hero on mobile */
+  }
+
+  .hero-overlay {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .top-bar {
+    position: sticky;       /* stays visible while scrolling */
+    top: 0;
+    background: rgba(232, 180, 155, 0.95); /* slightly more opaque for readability */
+    z-index: 100;           /* above hero and content */
+  }
+
+  /* Remove desktop offset for journey-section */
+  .journey-section {
+    margin-top: 0;
+  }
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #e89a70ff;
+  padding: 16px 32px;
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: fit-content;
+}
+/* Journey Section */
+.journey-section {
+  background-color: #E49276; /* soft orange */
+  padding: 80px 50px;
+}
+
+.journey-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.journey-text {
+  flex: 1;
+  min-width: 300px;
+  color: #ffffff;
+}
+
+.journey-text h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.journey-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.journey-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .journey-text h2 {
+    font-size: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .journey-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .journey-text {
+    margin-bottom: 40px;
+  }
+
+  .journey-text h2 {
+    font-size: 26px;
+  }
+}
+
+/* Improve Moments Section */
+.improve-section {
+  background-color: #fff8f2; /* soft warm background */
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.improve-section h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #2f2f2f;
+  margin-bottom: 50px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.card {
+  padding: 40px 30px;
+  border-radius: 15px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  color: white; /* default text color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Individual card colors */
+.card:nth-child(1) {
+  background-color: #6B987B;
+}
+
+.card:nth-child(2) {
+  background-color: #476f8bff;
+}
+
+.card:nth-child(3) {
+  background-color: #e89a70ff;
+  color: #ffffff; /* darker text for contrast */
+}
+
+.card h3 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+
+@media (max-width: 767px) {
+  .cards-container {
+    flex-direction: column !important;  /* force vertical stack */
+    align-items: center;                 /* center cards horizontally */
+    gap: 20px;                           /* spacing between cards */
+  }
+
+  .cards-container .card {
+    flex: none !important;               /* remove flex-grow/shrink */
+    width: 90% !important;               /* almost full width */
+    max-width: 500px !important;         /* optional max width */
+    min-width: 0 !important;             /* reset min-width */
+    padding: 30px 20px;
+    margin: 0 auto;                      /* center cards */
+  }
+
+  .improve-section h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+}
+
+/* ------------------------
+   Hamburger Menu
+------------------------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 11; /* above hero */
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #2f2f2f;
+  border-radius: 2px;
+}
+
+/* Hide nav links on mobile by default */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .top-bar {
+    padding: 20px 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px; /* below navbar */
+    right: 20px;
+    background: rgba(232,180,155,0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 150px;
+    padding: 15px;
+    border-radius: 8px;
+    display: none; /* hidden initially */
+  }
+
+  .nav-links a {
+    margin-bottom: 10px;
+    color: #2f2f2f;
+    font-weight: 600;
+  }
+
+  .hamburger {
+    display: flex; /* show hamburger on mobile */
+  }
+}

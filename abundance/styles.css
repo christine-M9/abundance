@@ -607,14 +607,15 @@ body {
 
 .pricing-section {
   position: relative;
-  background-image: url("./images/bb17.jpeg"); /* beautiful coaching image */
+  background-image: url("./images/bb17.jpeg"); /* your background image */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   padding: 140px 50px;
   color: white;
 }
 
-/* Optional: dark overlay to make text/cards readable */
+/* Optional overlay for readability */
 .pricing-section::before {
   content: "";
   position: absolute;
@@ -635,7 +636,6 @@ body {
   font-size: 36px;
   margin-bottom: 50px;
   color: #fff;
-  letter-spacing: 1px;
 }
 
 /* Cards */
@@ -663,7 +663,7 @@ body {
 }
 
 .price-card.highlight {
-  background: rgba(232,154,112,0.9); /* semi-transparent theme color */
+  background: rgba(232,154,112,0.9);
   color: white;
 }
 
@@ -672,18 +672,44 @@ body {
   margin-top: 20px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
   .pricing-section {
-    padding: 100px 30px;
+    padding: 120px 30px;
+    background-position: top center;
+  }
+
+  .pricing-overlay h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .price-card {
+    width: 45%;
+    padding: 30px 20px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+  .pricing-section {
+    padding: 100px 20px;
+    background-position: top center;
+  }
+
+  .pricing-overlay h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
   }
 
   .price-card {
     width: 100%;
     max-width: 320px;
+    padding: 25px 15px;
   }
 }
-
 
 /* Contact Section */
 .contact-section {

@@ -145,7 +145,8 @@ body {
    JOURNEY
 ========================= */
 .journey-section {
-  background-color: #E49276;
+  background-color: #E2D4DE;
+
   padding: 70px 50px; /* reduced height */
 }
 
@@ -161,7 +162,7 @@ body {
 .journey-text {
   flex: 1;
   min-width: 300px;
-  color: white;
+  color: black;
 }
 
 .journey-text h2 {
@@ -389,6 +390,16 @@ body {
     flex-direction: column;
   }
 }
+.service-row.highlight.soft-lilac {
+  background: #E2D4DE;
+  padding: 50px;
+  border-radius: 25px;
+}
+.service-row.highlight.soft-lilac h3,
+.service-row.highlight.soft-lilac p {
+  color: #000;
+}
+
 /* =========================
    ABOUT
 ========================= */

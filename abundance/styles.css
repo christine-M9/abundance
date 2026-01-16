@@ -605,36 +605,85 @@ body {
 }
 
 
-/* =========================
-   PRICING
-========================= */
 .pricing-section {
-  background: #fff8f2;
-  padding: 120px 50px;
+  position: relative;
+  background-image: url("./images/bb17.jpeg"); /* beautiful coaching image */
+  background-size: cover;
+  background-position: center;
+  padding: 140px 50px;
+  color: white;
+}
+
+/* Optional: dark overlay to make text/cards readable */
+.pricing-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* semi-transparent black overlay */
+  z-index: 1;
+}
+
+.pricing-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
 }
 
+.pricing-overlay h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* Cards */
 .pricing-cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
 }
 
 .price-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  color: #2f2f2f;
   padding: 40px 30px;
-  border-radius: 15px;
+  border-radius: 20px;
   width: 250px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
 }
 
 .price-card.highlight {
-  background: #e89a70;
+  background: rgba(232,154,112,0.9); /* semi-transparent theme color */
   color: white;
 }
+
+/* CTA Buttons */
+.price-card .cta-btn {
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pricing-section {
+    padding: 100px 30px;
+  }
+
+  .price-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
 
 /* Contact Section */
 .contact-section {

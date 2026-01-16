@@ -141,20 +141,23 @@ body {
 }
 
 /* =========================
+ /* =========================
    JOURNEY
 ========================= */
 .journey-section {
   background-color: #E49276;
-  padding: 80px 50px;
+  padding: 70px 50px; /* reduced height */
 }
 
 .journey-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
+/* TEXT */
 .journey-text {
   flex: 1;
   min-width: 300px;
@@ -162,19 +165,72 @@ body {
 }
 
 .journey-text h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
+  font-size: 34px;
+  margin-bottom: 14px;
 }
 
-.journey-image {
+.journey-text p {
+  font-size: 16px;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+/* =========================
+  /* =========================
+   JOURNEY IMAGE GALLERY – CLEAN & BALANCED
+========================= */
+.journey-gallery {
   flex: 1;
   min-width: 300px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 130px; /* slightly larger */
+  gap: 18px;
 }
 
-.journey-image img {
-  max-width: 100%;
-  border-radius: 10px;
+/* Images */
+.journey-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* full image, no cropping */
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.16);
+  transition: transform 0.35s ease;
+}
+
+.journey-gallery img:hover {
+  transform: scale(1.04);
+}
+
+/* Image layout */
+.journey-gallery img:nth-child(1) {
+  grid-column: span 4;
+  grid-row: span 2; /* hero image, but controlled */
+}
+
+.journey-gallery img:nth-child(2),
+.journey-gallery img:nth-child(3) {
+  grid-column: span 2;
+}
+
+.journey-gallery img:nth-child(4),
+.journey-gallery img:nth-child(5) {
+  grid-column: span 2;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 767px) {
+  .journey-gallery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 240px;
+  }
+
+  .journey-gallery img {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
 }
 
 /* =========================
@@ -237,10 +293,16 @@ body {
 
 .service-image img {
   width: 100%;
-  height: 340px;
-  object-fit: cover;
+  height: auto; /* auto height to keep full image */
+  max-height: 400px; /* slightly larger than before */
+  object-fit: contain; /* show full image without cropping */
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease;
+}
+
+.service-image img:hover {
+  transform: scale(1.03);
 }
 
 .service-content {
@@ -349,6 +411,7 @@ body {
 .about-text h2 {
   font-size: 36px;
   margin-bottom: 20px;
+  color: #e89a70;;
 }
 
 .about-text p {

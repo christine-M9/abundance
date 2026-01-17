@@ -107,18 +107,16 @@ body {
   z-index: 1;
 }
 
+/* Text on top of background */
 .hero-text {
   position: relative;
   z-index: 2;
   max-width: 500px;
   color: #fff;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* 👈 THIS is the key */
+  /* MOVE TEXT UP */
   transform: translateY(-60px);
 }
-
 
 /* Heading */
 .hero-text h2 {
@@ -164,21 +162,35 @@ body {
   z-index: 2;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
+  .hero-full {
+    flex-direction: column;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  /* Certificate on top, same as desktop */
   .hero-certificate {
-    /* keep same as desktop */
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    position: relative; /* remove absolute */
     width: 100%;
+    max-width: 600px;
+    margin: 20px auto 30px; /* space below for text */
     height: auto;
     aspect-ratio: 4/3;
   }
 
-  /* Optional: reduce hero padding for small screens so certificate fits */
-  .hero-full {
-    padding: 20px 15px;
+  /* Push text down slightly */
+  .hero-text {
+    transform: none; /* remove desktop lift */
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px; /* push it down from certificate */
+  }
+
+  /* Keep button below text */
+  .cta-btn {
+    display: inline-block;
+    margin: 20px auto 0;
   }
 }
 

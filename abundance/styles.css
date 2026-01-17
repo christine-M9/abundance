@@ -129,12 +129,12 @@ body {
 .cta-btn {
   display: inline-block;
   background: #e89a70;
-  padding: 16px 32px;
+  padding: 8px 32px;
   color: #fff;
   text-decoration: none;
   border-radius: 40px;
   font-size: 14px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 /* Certificate image floating on right */

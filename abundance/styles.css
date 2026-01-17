@@ -188,15 +188,14 @@ body {
 }
 @media (max-width: 768px) {
   .cta-btn {
-    display: block;        /* full-width block */
-    width: 100%;           /* stretch horizontally */
-    max-width: 400px;      /* optional: prevent it from being too wide on large phones */
-    margin: 10px auto 0;   /* center it */
-    text-align: center;    /* center the text inside the button */
-    padding: 1px 0px;       /* taller for full-width style */
+    display: block;       /* full-width block */
+    width: 100%;          /* stretch horizontally */
+    margin: 10px 0 0 0;   /* top margin only, no auto centering */
+    padding: 6px 0;       /* narrow height, adjust as needed */
+    text-align: center;   /* text inside button stays centered */
+    border-radius: 40px;  /* keeps rounded style */
   }
 }
-
 
 
 /* =========================

@@ -735,8 +735,8 @@ body {
 }
 
 .price-card.highlight {
-  background: rgba(232,154,112,0.9);
-  color: white;
+  background: #E2D4DE;
+  color: black;
 }
 
 /* CTA Buttons */

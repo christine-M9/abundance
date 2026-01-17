@@ -161,7 +161,6 @@ body {
   background-repeat: no-repeat;
   z-index: 2;
 }
-
 @media (max-width: 768px) {
   .hero-full {
     flex-direction: column;
@@ -169,11 +168,11 @@ body {
     justify-content: flex-start;
   }
 
-  /* Certificate on top, same as desktop */
+  /* Bigger certificate on mobile */
   .hero-certificate {
     position: relative; /* remove absolute */
-    width: 100%;
-    max-width: 600px;
+    width: 100%;          /* slightly bigger than before */
+    max-width: 650px;    /* allow larger size on bigger screens */
     margin: 20px auto 30px; /* space below for text */
     height: auto;
     aspect-ratio: 4/3;
@@ -186,13 +185,19 @@ body {
     padding: 10px 20px;
     margin-top: 20px; /* push it down from certificate */
   }
-
-  /* Keep button below text */
+}
+@media (max-width: 768px) {
   .cta-btn {
-    display: inline-block;
-    margin: 20px auto 0;
+    display: block;        /* full-width block */
+    width: 100%;           /* stretch horizontally */
+    max-width: 400px;      /* optional: prevent it from being too wide on large phones */
+    margin: 10px auto 0;   /* center it */
+    text-align: center;    /* center the text inside the button */
+    padding: 1px 0px;       /* taller for full-width style */
   }
 }
+
+
 
 /* =========================
    JOURNEY

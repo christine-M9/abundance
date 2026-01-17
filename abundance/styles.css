@@ -195,7 +195,7 @@ body {
     padding: 6px 0;       /* narrow height, adjust as needed */
     text-align: center;   /* text stays centered */
     font-size: 10px;      /* smaller font to match narrow height */
-    border-radius: 20px;  /* optional: keeps rounded ends */
+    border-radius: 9.5px;  /* optional: keeps rounded ends */
   }
 }
 

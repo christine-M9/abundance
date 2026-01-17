@@ -152,7 +152,7 @@ body {
   position: absolute;
   right: 2px;       /* slightly closer to edge */
   bottom: 0;
-  width: 57%;       /* enlarged */
+  width: 55%;       /* enlarged */
   height: auto;
   aspect-ratio: 4/3; /* keeps proportions */
   background-image: url("./images/bb30.jpeg");

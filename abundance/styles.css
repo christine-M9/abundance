@@ -426,6 +426,7 @@ body {
 
   .service-content p {
     font-size: 15px;
+    text-align: center;
   }
 }
 
@@ -443,6 +444,7 @@ body {
   .service-content p {
     font-size: 14.5px;
     line-height: 1.7;
+    
   }
 }
 @media (max-width: 900px) {
@@ -459,6 +461,7 @@ body {
 .service-row.highlight.soft-lilac h3,
 .service-row.highlight.soft-lilac p {
   color: #000;
+  text-align: center;
 }
 
 /* =========================

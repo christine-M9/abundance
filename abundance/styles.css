@@ -23,7 +23,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(232, 180, 155, 0.85);
+  background: #E2D4DE;
   backdrop-filter: blur(6px);
   display: flex;
   justify-content: space-between;
@@ -500,7 +500,7 @@ body {
    IMPACT SECTION
 ========================= */
 .impact-section {
-  background: #F6D8C5; /* soft peach, blends with site */
+  background: #E2D4DE; 
   color: #2f2f2f;
   padding: 100px 50px;
   text-align: center;
@@ -868,7 +868,7 @@ body {
    Footer
 --------------------------- */
 .footer {
-  background-color: rgba(232, 180, 155, 0.85);; /* matches CTA/theme color */
+  background-color: #E2D4DE;
   color: black;
   text-align: center;
   padding: 40px 20px;

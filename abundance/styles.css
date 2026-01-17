@@ -168,15 +168,17 @@ body {
     justify-content: flex-start;
   }
 
-  /* Bigger certificate on mobile */
+ @media (max-width: 768px) {
   .hero-certificate {
-    position: relative; /* remove absolute */
-    width: 100%;          /* slightly bigger than before */
-    max-width: 650px;    /* allow larger size on bigger screens */
-    margin: 20px auto 30px; /* space below for text */
+    position: relative;      /* remove absolute */
+    width: 95vw;             /* almost full viewport width */
+    max-width: none;         /* remove previous max-width limit */
+    margin: 10px 0 20px 0;   /* optional spacing */
     height: auto;
-    aspect-ratio: 4/3;
+    aspect-ratio: 4/3;       /* keeps proportions */
   }
+}
+
 
   /* Push text down slightly */
   .hero-text {

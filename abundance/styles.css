@@ -171,7 +171,7 @@ body {
  @media (max-width: 768px) {
   .hero-certificate {
     position: relative;      /* remove absolute */
-    width: 95vw;             /* almost full viewport width */
+    width: 92vw;             /* almost full viewport width */
     max-width: none;         /* remove previous max-width limit */
     margin: 10px 0 20px 0;   /* optional spacing */
     height: auto;

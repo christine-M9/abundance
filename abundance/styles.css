@@ -500,7 +500,7 @@ body {
    IMPACT SECTION
 ========================= */
 .impact-section {
-  background: #E2D4DE; 
+  background: rgba(232, 180, 155, 0.85); 
   color: #2f2f2f;
   padding: 100px 50px;
   text-align: center;

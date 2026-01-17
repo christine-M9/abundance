@@ -107,19 +107,26 @@ body {
   z-index: 1;
 }
 
-/* Text on top of background */
 .hero-text {
   position: relative;
   z-index: 2;
   max-width: 500px;
   color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 👈 THIS is the key */
+  transform: translateY(-60px);
 }
 
+
+/* Heading */
 .hero-text h2 {
   font-size: 44px;
   margin-bottom: 12px;
 }
 
+/* Subtitle */
 .hero-text .subtitle {
   font-size: 20px;
   font-weight: 700;
@@ -128,14 +135,19 @@ body {
 
 .cta-btn {
   display: inline-block;
+  align-self: flex-start;   /* forces left if parent is flex */
+  margin-left: 0;
+  text-align: left;
+
   background: #e89a70;
   padding: 8px 32px;
   color: #fff;
   text-decoration: none;
   border-radius: 40px;
-  font-size: 14px;
+  font-size: 11px;
   letter-spacing: 1px;
 }
+
 
 /* Certificate image floating on right */
 .hero-certificate {

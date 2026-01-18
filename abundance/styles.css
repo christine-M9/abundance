@@ -279,6 +279,12 @@ body {
 .journey-gallery img:nth-child(5) {
   grid-column: span 2;
 }
+/* Make last image big like the first one */
+.journey-gallery img:nth-child(6) {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
 
 /* =========================
    MOBILE
